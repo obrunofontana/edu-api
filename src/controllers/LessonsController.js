@@ -66,7 +66,9 @@ exports.create = async (req, res) => {
     
     const [lessonCreated] = await knex
       .select('*')
+      .from('lessons')
       .where({ id: lessonCreatedId });
+
 
     return res.status(200).send({
       status: 'success',
