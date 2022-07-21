@@ -14,6 +14,6 @@ app.options('*', cors());
 
 app.use(express.json());
 app.use(routes)
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log(`API education is on ${PORT}`);
 })
