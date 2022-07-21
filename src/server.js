@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const routes = require('./routes');
-const PORT = 8080;
+const PORT = 4000;
 
 const app = express();
 
@@ -14,6 +14,6 @@ app.options('*', cors());
 
 app.use(express.json());
 app.use(routes)
-app.listen(process.env.PORT || 4000, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`API education is on ${PORT}`);
 })
